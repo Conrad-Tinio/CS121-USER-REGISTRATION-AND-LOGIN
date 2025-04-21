@@ -1,21 +1,46 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import AuthContext from '../context/AuthContext'
 import './css/LoginPage.css'
 
 function LoginPage() {
-
-  const {loginUser} = useContext(AuthContext)
+  const [errors, setErrors] = useState({
+    email: '',
+    password: ''
+  })
+  
+  const { loginUser } = useContext(AuthContext)
+  
+  const validateForm = (email, password) => {
+    const newErrors = {
+      email: '',
+      password: ''
+    }
+    
+    let isValid = true
+    
+    if (!email.trim()) {
+      newErrors.email = 'Email address is required'
+      isValid = false
+    }
+    
+    if (!password) {
+      newErrors.password = 'Password is required'
+      isValid = false
+    }
+    
+    setErrors(newErrors)
+    return isValid
+  }
+  
   const handleSubmit = e => {
     e.preventDefault()
     const email = e.target.email.value
     const password = e.target.password.value
-
-    email.length > 0 && loginUser(email, password)
-
-    console.log(email)
-    console.log(password)
-   
+    
+    if (validateForm(email, password)) {
+      loginUser(email, password)
+    }
   }
 
   return (
@@ -38,20 +63,22 @@ function LoginPage() {
                         <input
                           type="email"
                           id="form2Example17"
-                          className="form-control"
+                          className={`form-control ${errors.email ? 'is-invalid' : ''}`}
                           name='email'
                           placeholder='Email Address'
                         />
+                        {errors.email && <div className="error-message">{errors.email}</div>}
                       </div>
 
                       <div className="form-group">
                         <input
                           type="password"
                           id="form2Example27"
-                          className="form-control"
+                          className={`form-control ${errors.password ? 'is-invalid' : ''}`}
                           name='password'
                           placeholder='Password'
                         />
+                        {errors.password && <div className="error-message">{errors.password}</div>}
                       </div>
 
                       <div className="form-button">

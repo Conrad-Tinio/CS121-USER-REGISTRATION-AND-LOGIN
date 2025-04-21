@@ -13,7 +13,8 @@
     --PURPLE_HOVER: #670791; 
     --PURPLE_TEXT: #6c1293; 
     --PURPLE_TEXT_HOVER: rgb(100, 14, 137); 
-    --PURPLE_BG_LIGHT: #e2bdf2; 
+    --PURPLE_BG_LIGHT: #c773e8; 
+    --PURPLE_LIGHT: #ad52d3; 
 }
 
 body {
@@ -39,26 +40,19 @@ body {
     color: white;
     font-weight: bold;
     font-size: 2rem;
-    height: 110px;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 2.25rem;
+    margin-bottom: 2rem;
     border-bottom: 1px solid #dee2e6;
 }
 
-.dashboard-header h1 {
-    display: flex;
-    flex-direction: column;
-    font-size: 2rem;
-    font-weight: 500;
-    margin: 0;
-}
-
 .username {
-    color: var(--PURPLE);
+    color: var(--PURPLE_BG_LIGHT);
     font-family: Poppins-Bold;
+    text-shadow: 0 0 12px var(--PURPLE) !important;
 }
 
 .logout-button {
@@ -74,11 +68,23 @@ body {
 }
 
 .alert-success {
-    color: #000000;
-    background-color: var(--PURPLE_BG_LIGHT);
-    border: none;
+    color: var(--PURPLE_LIGHT);
+    background-color: transparent;  
     padding: 0.75rem 1.25rem;
     margin-bottom: 1rem;
-    border: 1px solid transparent;
+    box-shadow: 0 0 10px 3px rgba(155, 67, 237, 0.8);
+    border: none; 
     border-radius: 0.25rem;
+}
+
+.logout-btn {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.logout-button {
+    background-color: var(--PURPLE_LIGHT);
+    border-radius: 50px;
+    width: 120px;
+    height: 40px;
 }

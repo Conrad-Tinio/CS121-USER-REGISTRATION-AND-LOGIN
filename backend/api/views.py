@@ -56,10 +56,10 @@ def getRoutes(request):
 @permission_classes([IsAuthenticated])
 def dashboard(request):
     if request.method == "GET":
-        response = f"You have successfully logged in!"
+        response = f"You have successfully logged in to your account!"
         return Response({'response': response}, status=status.HTTP_200_OK)
     elif request.method == "POST":
-        data = f'You have successfully logged in!'
+        data = f'You have successfully logged in to your account!'
         return Response({'response': data}, status=status.HTTP_200_OK)
     return Response({}, status=status.HTTP_400_BAD_REQUEST)
 

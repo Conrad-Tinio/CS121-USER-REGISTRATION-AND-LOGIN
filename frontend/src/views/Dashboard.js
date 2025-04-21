@@ -56,12 +56,16 @@ function Dashboard() {
       <main className="dashboard-main">
         <div className="dashboard-header">
           <span>
-            <span className='welcome-message'>Welcome back, <b className='username'> {first_name + " " + last_name}!</b>  </span>
+            <span className='welcome-message'>Welcome, <b className='username'> {first_name + " " + last_name}!</b>  </span>
           </span>
-          <button className='logout-button' onClick={logoutUser}>Logout</button>
         </div>
         <div className='alert-success'>
           <strong>{response}</strong>
+        </div>
+        <div className='logout-btn-body'>
+          <div className='logout-btn'> 
+            <button className='logout-button' onClick={logoutUser}>Logout</button>
+          </div>
         </div>
       </main>
     </div>

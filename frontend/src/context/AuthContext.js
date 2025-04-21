@@ -60,7 +60,7 @@ export const AuthProvider = ({ children }) => {
             console.log(response.status);
             console.log("there was a server issue");
             swal.fire({
-                title: "Username does not exist. Please check your login credentials again.",
+                title: "User does not exist. Please check your login credentials again.",
                 icon: "error",
                 toast: true,
                 timer: 6000,
@@ -94,7 +94,7 @@ export const AuthProvider = ({ children }) => {
             if (response.ok) {
                 history.push("/login");
                 swal.fire({
-                    title: "Registration Successful, Login Now",
+                    title: "Registration Successful. Login Now",
                     icon: "success",
                     toast: true,
                     timer: 6000,
