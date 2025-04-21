@@ -17,9 +17,25 @@
   - After installation -> npm start
  
 ### FEATURES:
-* Login Page:
+* Login Page (only works when a user is registered in the database):
+  - Asks the user for their:
+      - Email address
+      - Password
 * Register Page:
+  - Asks the user for their:
+    - First name
+    - Last name
+    - Birthday
+    - Email
+    - Username (for database puropses)
+    - Password
+    - Password Confirmation (for password verification)
 * Dashboard:
+  - Once a user has logged in, the Dashboard greets them with a welcome message with their name (first name and last name)
+  - A logout button can also be seen which allows the user to sign out of their accounts
+* Navigation Bar: (upper left corner or the button at the top when tab is resized to smaller size)
+  - If a user is not yet logged in, this shows: Login and Register
+  - If a user is logged in, this shows: Dashboard and Logout
 
 ### TECH STACK:
 * Django, React
