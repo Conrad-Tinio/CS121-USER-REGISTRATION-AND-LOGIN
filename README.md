@@ -5,6 +5,7 @@
 
 ### HOW TO RUN THE PROGRAM:
 * Clone the Github Repository to your local computer
+* Open the folder in a code editor (e.g. VS Code) then open a new terminal.
 * Create a virtual environment (to ensure safe practices on Django): on CMD, run python -m venv venv
 * Activate your virtual environment: on CMD, venv\Scripts\activate
 * Install requirements for this app to run: on CMD, pip install -r requirements.txt
