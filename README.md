@@ -7,7 +7,7 @@
 * Clone the Github Repository to your local computer
 * Open the folder in a code editor (e.g. VS Code) then open a new terminal.
 * Create a virtual environment (to ensure safe practices on Django): on CMD, run python -m venv venv
-* Activate your virtual environment: on CMD, venv\Scripts\activate
+* Activate your virtual environment: on CMD, venv\Scripts\activate OR venv\bin\activate (depending on your OS)
 * Install requirements for this app to run: on CMD, pip install -r requirements.txt
 * Run your backend server:
   - cd backend
